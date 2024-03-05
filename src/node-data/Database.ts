@@ -1,6 +1,6 @@
 import mysql from 'mysql2/promise'
-import Config from './Config';
-import Connection from './Connection';
+import Config from './Config'
+import Connection from './Connection'
 
 /**
  * This should be a singleton class.

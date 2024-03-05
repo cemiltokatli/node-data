@@ -1,4 +1,4 @@
-import DataConversion from './data-conversion';
+import DataConversion from './data-conversion'
 
 /**
  * Represents a field in a row. It provides methods to convert data to JS data types.

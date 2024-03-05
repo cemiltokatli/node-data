@@ -1,4 +1,4 @@
-import DatabaseError from './DatabaseError';
+import DatabaseError from './DatabaseError'
 
 /**
  * An object of this class represents the result of a database insert, delete or update operation.

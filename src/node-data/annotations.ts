@@ -18,7 +18,7 @@ export function ModelField(column: string) {
       target.constructor['model'] = {}
     }
 
-    const type = Reflect.getMetadata("design:type", target, key);
+    const type = Reflect.getMetadata('design:type', target, key)
     target.constructor['model'][key] = {
       type: type.name.toLowerCase(),
       column,
