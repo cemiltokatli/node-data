@@ -2,7 +2,7 @@
  * This is the @Model annotation. Marks a class as a database table.
  */
 export function Model() {
-  return (ctor: Function) => {
+  return (ctor: Function) => { // eslint-disable-line
     if ((ctor as any)['model']) {
       (ctor as any)['isModel'] = true
     }
