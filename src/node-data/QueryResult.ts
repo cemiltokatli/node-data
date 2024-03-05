@@ -38,7 +38,7 @@ class QueryResult {
   public toList<T>(model: T | undefined): T[] | Row[] {
     // No model class is defined.
     if (model === undefined) {
-      let rows: Row[] = []
+      const rows: Row[] = []
 
       if (this.data.length > 0) {
         // "keys" stores the columns fetched in the SELECT query.
@@ -46,7 +46,7 @@ class QueryResult {
 
         // Go through each row
         for (const item of this.data) {
-          let row: Row = {}
+          const row: Row = {}
 
           // Go through each column in the row
           for (const key of keys) {
@@ -61,7 +61,7 @@ class QueryResult {
     }
 
     // A model class is defined.
-    let rows: T[] = []
+    const rows: T[] = []
 
     const modelClass = (model as any).constructor as any
     const isModel = (modelClass as any)['isModel']
@@ -73,7 +73,7 @@ class QueryResult {
 
       // Go through each row
       for (const item of this.data) {
-        let row: any = new (modelClass as any)()
+        const row: any = new (modelClass as any)()
 
         // Go through each class property
         for (const classProperty of classProperties) {
