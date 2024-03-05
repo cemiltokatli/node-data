@@ -1,7 +1,7 @@
 import mysql, {ResultSetHeader, format} from 'mysql2/promise'
-import QueryResult from './QueryResult';
-import DatabaseError from './DatabaseError';
-import ExecuteResult from './ExecuteResult';
+import QueryResult from './QueryResult'
+import DatabaseError from './DatabaseError'
+import ExecuteResult from './ExecuteResult'
 
 /**
  * This class represents a database connection and provides methods to perform various database tasks.
