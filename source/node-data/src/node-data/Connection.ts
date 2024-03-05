@@ -22,7 +22,7 @@ class Connection {
   }
 
   /**
-   *
+   * Executes the given procedure call command and then the given select command to retrieve values of OUT vars.
    */
   public async call(procedureCallSql: string, selectSql: string, ...values: any[]): Promise<QueryResult> {
     try {
