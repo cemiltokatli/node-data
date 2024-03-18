@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production && cp package.json dist/package.json",
+    "build": "npm run clear && tsc --outDir lib && npm run copy",
+    "clear": "rm -rf lib",
+    "copy": "cp package.json lib/package.json",
     "lint": "eslint . --ext .ts,.tsx",
     "lintstaged": "lint-staged"
   },
@@ -24,19 +25,12 @@
     "@types/node": "^20.11.24",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
-    "clean-webpack-plugin": "^4.0.0",
-    "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.2",
-    "nodemon": "^3.1.0",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.3.3",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4",
-    "webpack-node-externals": "^3.0.0"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "mysql2": "^3.9.2",
