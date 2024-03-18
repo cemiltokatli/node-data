@@ -1,3 +1,5 @@
+import 'reflect-metadata'
+
 /**
  * This is the @Model annotation. Marks a class as a database table.
  */
