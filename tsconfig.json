@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
-    "jsx": "react",
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "resolveJsonModule": true,
-    "target": "es2021",
+    "target": "es2015",
     "strictNullChecks": true
   },
   "include": [
