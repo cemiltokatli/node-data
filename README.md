@@ -4,7 +4,7 @@
 
 ## Structure
 
-`Database` class is the fundamental block of the library. It creates a connection pool to a database. An object of this class should be initialized per database used in the application and the same object should be used everywhere.
+`Database` class is the fundamental block of the library. It creates a connection pool to a database. An object of this class should be initialized per database used in the application and the same object should be used everywhere to query the same database.
 
 `getConnection()` method of `Database` class returns a new `Connection` object which represents an isolated database connection grabbed from the pool. It is cheap to create a `Connection` object as it is just a wrapper for `mysql.PoolConnection` object. When you call `getConnection()` method, it retrieves a connection from the pool by using `getConnection()` method of `mysql.Pool` object and initializes `Connection` object with that actual database connection object.
 
@@ -14,7 +14,7 @@
 
 #### `@Model`
 
-Marks a class as a database table. It is used for mapping tables to object while fetching data from database.
+Marks a class as a database table. It is used for mapping tables to objects while fetching data from database.
 
 #### `@ModelField(column: string)`
 
@@ -102,7 +102,7 @@ class ExecuteResult {
 
 ### `Field` class
 
-An object this class represents a single field in a row, esentially represents data in a cell. It provides methods to convert data to certain types.
+An object of this class represents a single field in a row, esentially represents data in a cell. It provides methods to convert data to certain types.
 
 ``` typescript
 class Field {

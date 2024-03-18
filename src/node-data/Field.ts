@@ -17,6 +17,9 @@ class Field {
     return DataConversion.boolean(this.data)
   }
 
+  /**
+   * Converts the data to date and returns it.
+   */
   public toDate(): Date {
     return DataConversion.date(this.data)
   }
