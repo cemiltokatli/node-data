@@ -1,8 +1,7 @@
 {
   "name": "@cemiltokatli/node-data",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "npm run clear && tsc --outDir lib && npm run copy",
     "clear": "rm -rf lib",
@@ -18,22 +17,20 @@
       "eslint"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Cemil TOKATLI",
   "devDependencies": {
-    "@types/node": "^20.11.24",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.2",
-    "typescript": "^5.3.3"
+    "@types/node": "~20.11.24",
+    "@typescript-eslint/eslint-plugin": "~7.1.1",
+    "@typescript-eslint/parser": "~7.1.1",
+    "eslint": "~8.57.0",
+    "eslint-plugin-react": "~7.34.0",
+    "eslint-plugin-react-hooks": "~4.6.0",
+    "husky": "~8.0.0",
+    "lint-staged": "~15.2.2",
+    "typescript": "~5.3.3"
   },
   "dependencies": {
-    "mysql2": "^3.9.2",
-    "reflect-metadata": "^0.2.1"
+    "mysql2": "~3.9.2",
+    "reflect-metadata": "~0.2.1"
   }
 }
