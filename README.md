@@ -58,11 +58,11 @@ It is a single object. It just provides methods to convert given data to certain
 
 ```typescript
 const DataConversion = {
-	boolean: (data: any): boolean,
-  date: (data: any): Date,
-  enum: <T>(model: T, data: any): T[keyof T],
-  number: (data: any): number,
-  string: (data: any): string
+	boolean: (data: any): Nullable<boolean>,
+  date: (data: any): Nullable<Date>,
+  enum: <T>(model: T, data: any): Nullable<T[keyof T]>,
+  number: (data: any): Nullable<number>,
+  string: (data: any): Nullable<string>
 }
 ```
 
@@ -107,11 +107,11 @@ An object of this class represents a single field in a row, esentially represent
 ``` typescript
 class Field {
 	constructor(data: any)
-  public toBoolean(): boolean
-  public toDate(): Date
-  public toEnum<T>(model: T): T[keyof T]
-  public toNumber(): number
-  public toString(): string
+  public toBoolean(): Nullable<boolean>
+  public toDate(): Nullable<Date>
+  public toEnum<T>(model: T): Nullable<T[keyof T]>
+  public toNumber(): Nullable<number>
+  public toString(): Nullable<string>
 }
 ```
 
