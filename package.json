@@ -1,6 +1,6 @@
 {
   "name": "@cemiltokatli/node-data",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Database helper library that provides classes and methods for you to query MySQL database.",
   "keywords": ["database", "mysql", "node", "data", "sql", "query"],
   "scripts": {

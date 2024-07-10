@@ -145,7 +145,7 @@ interface Row {
 
 ## Installation
 
-You can install `node-data` with the following `npm` command:
+You can install `node-data` with the following [npm](https://www.npmjs.com/package/@cemiltokatli/node-data) command:
 
 ```
 npm i @cemiltokatli/node-data
@@ -177,4 +177,4 @@ const connection = await database.getConnection()
 connection.release()
 ```
 
-Please check the [sample project](https://github.com/cemiltokatli/node-data-sample) folder for usage examples.
+Please check the [sample project](https://github.com/cemiltokatli/node-data-sample) for usage examples.
