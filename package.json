@@ -1,12 +1,12 @@
 {
   "name": "@cemiltokatli/node-data",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Database helper library that provides classes and methods for you to query MySQL database.",
+  "keywords": ["database", "mysql", "node", "data", "sql", "query"],
   "scripts": {
     "build": "npm run clear && tsc --outDir lib && npm run copy",
     "clear": "rm -rf lib",
-    "copy": "cp package.json lib/package.json",
+    "copy": "cp package.json lib/package.json && cp README.md lib/README.md",
     "lint": "eslint . --ext .ts,.tsx",
     "lintstaged": "lint-staged"
   },
@@ -18,22 +18,21 @@
       "eslint"
     ]
   },
-  "keywords": [],
-  "author": "",
+  "author": "Cemil TOKATLI",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.24",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.2",
-    "typescript": "^5.3.3"
+    "@types/node": "~20.11.24",
+    "@typescript-eslint/eslint-plugin": "~7.1.1",
+    "@typescript-eslint/parser": "~7.1.1",
+    "eslint": "~8.57.0",
+    "eslint-plugin-react": "~7.34.0",
+    "eslint-plugin-react-hooks": "~4.6.0",
+    "husky": "~8.0.0",
+    "lint-staged": "~15.2.2",
+    "typescript": "~5.3.3"
   },
   "dependencies": {
-    "mysql2": "^3.9.2",
-    "reflect-metadata": "^0.2.1"
+    "mysql2": "~3.9.2",
+    "reflect-metadata": "~0.2.1"
   }
 }

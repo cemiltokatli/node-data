@@ -58,11 +58,11 @@ It is a single object. It just provides methods to convert given data to certain
 
 ```typescript
 const DataConversion = {
-	boolean: (data: any): boolean,
-  date: (data: any): Date,
-  enum: <T>(model: T, data: any): T[keyof T],
-  number: (data: any): number,
-  string: (data: any): string
+	boolean: (data: any): Nullable<boolean>,
+  date: (data: any): Nullable<Date>,
+  enum: <T>(model: T, data: any): Nullable<T[keyof T]>,
+  number: (data: any): Nullable<number>,
+  string: (data: any): Nullable<string>
 }
 ```
 
@@ -107,11 +107,11 @@ An object of this class represents a single field in a row, esentially represent
 ``` typescript
 class Field {
 	constructor(data: any)
-  public toBoolean(): boolean
-  public toDate(): Date
-  public toEnum<T>(model: T): T[keyof T]
-  public toNumber(): number
-  public toString(): string
+  public toBoolean(): Nullable<boolean>
+  public toDate(): Nullable<Date>
+  public toEnum<T>(model: T): Nullable<T[keyof T]>
+  public toNumber(): Nullable<number>
+  public toString(): Nullable<string>
 }
 ```
 
@@ -143,3 +143,38 @@ interface Row {
 }
 ```
 
+## Installation
+
+You can install `node-data` with the following `npm` command:
+
+```
+npm i @cemiltokatli/node-data
+```
+
+## Usage
+
+### Creating a connection pool
+
+```
+import Database from '@cemiltokatli/node-data/Database'
+
+const database = new Database({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'root',
+    database: 'mydatabase',
+})
+```
+
+Then, you can retrieve a new database connection from the pool:
+
+```
+const connection = await database.getConnection()
+
+// database operations...
+
+connection.release()
+```
+
+Please check the [sample project](https://github.com/cemiltokatli/node-data-sample) folder for usage examples.
