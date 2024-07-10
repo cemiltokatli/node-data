@@ -143,3 +143,38 @@ interface Row {
 }
 ```
 
+## Installation
+
+You can install `node-data` with the following `npm` command:
+
+```
+npm i @cemiltokatli/node-data
+```
+
+## Usage
+
+### Creating a connection pool
+
+```
+import Database from '@cemiltokatli/node-data/Database'
+
+const database = new Database({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'root',
+    database: 'mydatabase',
+})
+```
+
+Then, you can retrieve a new database connection from the pool:
+
+```
+const connection = await database.getConnection()
+
+// database operations...
+
+connection.release()
+```
+
+Please check the [sample project](https://github.com/cemiltokatli/node-data-sample) folder for usage examples.
